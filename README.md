@@ -12,9 +12,11 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 Open http://127.0.0.1:4173/.
 
-## Cloudflare Pages
+## Cloudflare hosting
 
-Connect this repository using branch **main**, framework **None**, build command **exit 0**, and output directory **dist**. Add **shyanahr.com.my** as the custom domain. See [CLOUDFLARE_PAGES.md](CLOUDFLARE_PAGES.md) for details.
+The current staging site uses **Cloudflare Workers** at https://shyanahr.caleb-6fd.workers.dev/. The primary `wrangler.jsonc` serves `dist/` as static assets. Use build command `exit 0` (or blank) and deploy command `npx wrangler deploy`. See [CLOUDFLARE_WORKERS.md](CLOUDFLARE_WORKERS.md).
+
+For an alternative **Cloudflare Pages** project, use the separate `wrangler.pages.jsonc` configuration and the instructions in [CLOUDFLARE_PAGES.md](CLOUDFLARE_PAGES.md). The intended production custom domain remains **shyanahr.com.my**.
 
 The complete deployable site is committed under `dist/`, including all WebP images, fonts and PDFs. No external image host, Node dependencies or runtime server is needed. Regenerate with `python3 build_site.py`, using retained source snapshots in `content/` and committed assets. Set `SITE_URL` to change the production origin before regenerating.
 

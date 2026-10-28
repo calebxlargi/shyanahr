@@ -1,5 +1,10 @@
 {
   "name": "shyanahr",
-  "pages_build_output_dir": "./dist",
-  "compatibility_date": "2026-10-28"
+  "compatibility_date": "2026-10-28",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
 }
