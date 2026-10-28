@@ -43,7 +43,7 @@ footer=re.search(r'<footer class="site-footer.*?</footer>',base,re.S)[0]
 footer=footer.replace('href="#services"','href="/#services"')
 clientstrip=re.search(r'<section class="clients wrap".*?</section>',base,re.S)[0]
 head=re.search(r'<!doctype html>.*?</head>',base,re.S)[0]
-head=head.replace('</head>','<link rel="stylesheet" href="/pages.css"><script src="/pages.js" defer></script></head>')
+head=head.replace('</head>','<link rel="stylesheet" href="/pages.css"><script src="/pages.js" defer></script><link rel="stylesheet" href="/motion.css"><script src="/motion.js" defer></script></head>')
 arrow='<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg>'
 records=[]
 
@@ -163,7 +163,7 @@ body+='<section class="wrap profile-section" aria-label="Company profile reader"
 write('company-profile','Company Profile',body,'Explore the ShyanaHR company profile and download the PDF.','Company')
 
 # Homepage and navigation now stay on the local site.
-base=base.replace('</head>','<link rel="stylesheet" href="/pages.css"><script src="/pages.js" defer></script></head>')
+base=base.replace('</head>','<link rel="stylesheet" href="/pages.css"><script src="/pages.js" defer></script><link rel="stylesheet" href="/motion.css"><script src="/motion.js" defer></script></head>')
 base=base.replace('</head>',f'<link rel="canonical" href="{ORIGIN}/"><meta property="og:url" content="{ORIGIN}/"></head>')
 (D/'index.html').write_text(base)
 (D/'site-pages.json').write_text(json.dumps([{'route':'/','title':'Home'}]+records,indent=2))

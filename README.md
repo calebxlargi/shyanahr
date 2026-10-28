@@ -24,7 +24,8 @@ The complete deployable site is committed under `dist/`, including all WebP imag
 
 - Shared responsive header/footer, Facebook, WhatsApp, Instagram and TikTok links.
 - All five Valuable Quotes and 2026 copyright.
-- Animated client-logo strip with balanced sizes, pause controls and reduced-motion support.
+- Continuous client-logo strip with balanced sizes, explicit pause controls and reduced-motion support. Hovering and control focus do not stop playback; fractional movement is preserved on high-refresh displays.
+- Reference-style staggered headlines, scroll reveals, gentle photo movement, counters and panel transitions.
 - Programme filtering, complete programme lists and gallery lightboxes.
 - Company-profile page navigation and original PDF downloads.
 - Contact form validation and reviewable email-draft preparation; no automatic delivery or false sent confirmation.

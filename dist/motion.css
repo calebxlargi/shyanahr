@@ -1,0 +1,32 @@
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+.motion-word-wrap{display:inline-block;overflow:clip;vertical-align:bottom;padding:.12em .08em;margin:-.12em -.08em}
+.motion-word{display:inline-block;transform-origin:50% 100%}
+.motion-enabled .entrance-title .motion-word{animation:word-rise 1s var(--motion-ease) both;animation-delay:calc(100ms + var(--word-order,0)*55ms)}
+.motion-enabled [data-reveal]{transition:opacity .85s var(--motion-ease),transform .95s var(--motion-ease),clip-path 1.15s var(--motion-ease);transition-delay:var(--reveal-delay,0ms)}
+.motion-enabled [data-reveal]:not(.is-visible){opacity:0;transform:translate3d(0,26px,0)}
+.motion-enabled [data-reveal="image"]:not(.is-visible){clip-path:inset(7% 0 7% 0);transform:translate3d(0,18px,0)}
+.motion-enabled [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0)}
+.motion-enabled [data-reveal="image"].is-visible{clip-path:inset(0)}
+.motion-enabled .hero-note{animation:soft-rise .9s var(--motion-ease) .45s both}
+.motion-enabled .page-intro .intro-note{animation:soft-rise .9s var(--motion-ease) .35s both}
+.motion-enabled .hero-topline,.motion-enabled .page-topline{animation:soft-rise .7s var(--motion-ease) both}
+.motion-enabled .motion-photo{overflow:hidden}
+.motion-enabled .motion-photo>img{animation:none;transform:translate3d(0,var(--photo-offset,0px),0) scale(1.045);will-change:transform}
+.service-body:not([hidden]){animation:panel-rise .45s var(--motion-ease) both}
+.testimonial-slide:not([hidden]){animation:soft-rise .55s var(--motion-ease) both}
+.dropdown-panel:not([hidden]){animation:panel-rise .22s var(--motion-ease) both}
+.mobile-panel:not([hidden]){animation:panel-rise .3s var(--motion-ease) both}
+.site-header{transition:box-shadow .3s ease}
+.site-header.header-scrolled{box-shadow:0 1px 0 #deded880}
+.solid-link .arrow,.text-link .arrow,.collection-next>.arrow{transition:transform .35s var(--motion-ease)}
+.solid-link:hover .arrow,.text-link:hover .arrow,.collection-next:hover>.arrow{transform:translate(3px,-3px)}
+.development-card,.programme,.consulting-card{scroll-margin-top:130px}
+@keyframes word-rise{from{transform:translate3d(0,110%,0) rotate(2deg);opacity:0}to{transform:translate3d(0,0,0) rotate(0);opacity:1}}
+@keyframes soft-rise{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes panel-rise{from{opacity:0;transform:translate3d(0,8px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){
+ .motion-enabled [data-reveal],.motion-enabled [data-reveal]:not(.is-visible){opacity:1;transform:none;clip-path:none;transition:none}
+ .motion-enabled .motion-photo>img{transform:none;will-change:auto}
+ .motion-word{transform:none!important;opacity:1!important;animation:none!important}
+ .hero-note,.page-topline,.hero-topline,.intro-note{animation:none!important}
+}

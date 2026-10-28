@@ -34,13 +34,9 @@ originalClientLogos.forEach(logo=>{const copy=logo.cloneNode(true);copy.setAttri
 const pauseClients=document.createElement('button');
 pauseClients.type='button';pauseClients.id='clients-pause';pauseClients.className='round-button';
 document.querySelector('.client-controls').prepend(pauseClients);
-let clientPaused=reduceMotion.matches,clientHover=false,clientFocus=false,clientVisible=false,clientResumeAt=0,lastClientFrame=0;
+let clientPaused=reduceMotion.matches,clientVisible=false,clientResumeAt=0,lastClientFrame=0,clientPosition=clients.scrollLeft;
 function updateClientPause(){pauseClients.setAttribute('aria-label',clientPaused?'Play client logo animation':'Pause client logo animation');pauseClients.setAttribute('aria-pressed',String(clientPaused));pauseClients.innerHTML=clientPaused?'<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg>':'<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4v12M13 4v12"/></svg>';}
 updateClientPause();pauseClients.addEventListener('click',()=>{clientPaused=!clientPaused;updateClientPause();});
-clientSection.addEventListener('pointerenter',()=>clientHover=true);
-clientSection.addEventListener('pointerleave',()=>clientHover=false);
-clientSection.addEventListener('focusin',()=>clientFocus=true);
-clientSection.addEventListener('focusout',event=>{if(!clientSection.contains(event.relatedTarget))clientFocus=false;});
 clients.addEventListener('touchstart',()=>clientResumeAt=performance.now()+6000,{passive:true});
 clients.addEventListener('wheel',()=>clientResumeAt=performance.now()+4000,{passive:true});
 reduceMotion.addEventListener('change',event=>{clientPaused=event.matches;updateClientPause();});
@@ -56,10 +52,13 @@ document.querySelector('#clients-next').addEventListener('click',()=>moveClients
 document.querySelector('#clients-prev').addEventListener('click',()=>moveClients(-1));
 function animateClients(now){
  const delta=Math.min(now-(lastClientFrame||now),50);lastClientFrame=now;
- if(clientVisible&&!document.hidden&&!clientPaused&&!clientHover&&!clientFocus&&now>clientResumeAt){
-  const loop=clientLoopWidth();clients.scrollLeft+=delta*.032;
-  if(loop>0&&clients.scrollLeft>=loop)clients.scrollLeft-=loop;
- }
+ if(clientVisible&&!document.hidden&&!clientPaused&&now>clientResumeAt){
+  const loop=clientLoopWidth();
+  // Accumulate sub-pixel movement independently of rounded browser scroll positions.
+  clientPosition+=delta*.04;
+  if(loop>0&&clientPosition>=loop)clientPosition%=loop;
+  clients.scrollLeft=clientPosition;
+ }else{clientPosition=clients.scrollLeft;}
  requestAnimationFrame(animateClients);
 }
 requestAnimationFrame(animateClients);
