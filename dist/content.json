@@ -1,0 +1,117 @@
+{
+  "testimonials": [
+    {
+      "role": "Managing Director / Engineering Industry",
+      "quote": "Their HR Consultancy expertise and advice is easy and valuable. Their HR technology services is reliable and trusted"
+    },
+    {
+      "role": "Vice President / Manufacturing Industry",
+      "quote": "They will only fix what is broken. They do not unnecessary ask you to implement or change things which is not required by the company. They are passionate and fun to work with."
+    },
+    {
+      "role": "Director / Education Industry",
+      "quote": "I recommend SCT training, they are well priced, well-tailored, gets the job done and amazing follow-up."
+    },
+    {
+      "role": "Manager / Automobile Industry",
+      "quote": "Their training session is fun. The trainer's approach made us comfortable. Looking forward to future training with them"
+    },
+    {
+      "role": "Chief People Officer / Information Technology Industry",
+      "quote": "I want to express my sincere congratulations to the entire team at SCT. They resolved all our issues within a very tight timeline and delivered exceptional training programs."
+    },
+    {
+      "role": "Training Manager / Fleet Industry",
+      "quote": "SCT is knowledgeable and reputable in the industry, we are extremely delighted with the level of skill, knowledge and professionalism displayed."
+    },
+    {
+      "role": "Director / Services Industry",
+      "quote": "Their Winning programs are superb. Their methodology is realistic, simple, and engaging. Especially the Customer 1st Mindset Reboot Program"
+    }
+  ],
+  "programmes": [
+    {
+      "title": "Internal Combustion Engine (ICE)",
+      "subtitle": "Exam Preparation Coaching",
+      "description": "This program is specifically designed for all Genset Operators in Malaysia. You are required to get your team members CERTIFIED according to JKKP. This program will enhance participants knowledge, skills, and competency level in mobile genset operations.",
+      "status": "Compledted Successfully High in Demand!!!",
+      "image": "assets/programme-1.webp"
+    },
+    {
+      "title": "Fleet Industry Program",
+      "subtitle": "",
+      "description": "The program is aimed at each employee of the fleet department (Supervisors and Pilots) to enhance their understanding, challenge the way they think and ultimately cultivating the culture of openness, being transparent and being accountable for their actions.",
+      "status": "Multiple Session Completed",
+      "image": "assets/programme-2.webp"
+    },
+    {
+      "title": "Genset Operators Awareness Program",
+      "subtitle": "",
+      "description": "Specifically customized for all Genset Operators in Malaysia. This program will enhance your interest, knowledge and further understanding of areas such as Internal Combustion Engine (ICE), safety requirements and compliance and regulatory requirements as a Genset Operator.",
+      "status": "Multiple Session Completed",
+      "image": "assets/programme-3.webp"
+    },
+    {
+      "title": "Motivating Your Fleet Force",
+      "subtitle": "",
+      "description": "Embrace the New Norm proactively and adapt to change fast in fleet industry during these unpredictable times.",
+      "status": "Multiple Session Completed",
+      "image": "assets/programme-4.webp"
+    },
+    {
+      "title": "Mindset & Digital Transformation Skills Program",
+      "subtitle": "",
+      "description": "This training is uniquely designed to embrace a positive mindset with the evolution of digitization platforms. In order to stay competitive, relevant, and reliable in today's new norm you are required to grow your people skills (soft skills) and industry and technology knowledge (hard skills).",
+      "status": "Multiple Session Completed",
+      "image": "assets/programme-5.webp"
+    },
+    {
+      "title": "Women Entrepreneurship Mindset Program",
+      "subtitle": "",
+      "description": "This 2-day training is uniquely designed to help women to achieve an entrepreneurial global mindset, enhance their self-image and evolution of digitization platforms.",
+      "status": "Multiple Session Completed",
+      "image": "assets/programme-6.webp"
+    }
+  ],
+  "clients": [
+    "assets/client-01.webp",
+    "assets/client-02.webp",
+    "assets/client-03.webp",
+    "assets/client-04.webp",
+    "assets/client-05.webp",
+    "assets/client-06.webp",
+    "assets/client-07.webp",
+    "assets/client-08.webp",
+    "assets/client-09.webp",
+    "assets/client-10.webp",
+    "assets/client-11.webp",
+    "assets/client-12.webp",
+    "assets/client-13.webp",
+    "assets/client-14.webp",
+    "assets/client-15.webp",
+    "assets/client-16.webp",
+    "assets/client-17.webp",
+    "assets/client-18.webp",
+    "assets/client-19.webp",
+    "assets/client-20.webp",
+    "assets/client-21.webp",
+    "assets/client-22.webp",
+    "assets/client-23.webp",
+    "assets/client-24.webp",
+    "assets/client-25.webp",
+    "assets/client-26.webp",
+    "assets/client-27.webp",
+    "assets/client-28.webp",
+    "assets/client-29.webp",
+    "assets/client-30.webp",
+    "assets/client-31.webp",
+    "assets/client-32.webp",
+    "assets/client-33.webp"
+  ],
+  "badges": [
+    "assets/badge-1.webp",
+    "assets/badge-2.webp",
+    "assets/badge-3.webp",
+    "assets/badge-4.webp"
+  ]
+}

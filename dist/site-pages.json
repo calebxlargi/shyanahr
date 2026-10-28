@@ -1,0 +1,42 @@
+[
+  {
+    "route": "/",
+    "title": "Home"
+  },
+  {
+    "route": "/about/",
+    "title": "About Us"
+  },
+  {
+    "route": "/hr-management-consulting/",
+    "title": "HR Management & Consulting"
+  },
+  {
+    "route": "/professional-development/",
+    "title": "Professional Development"
+  },
+  {
+    "route": "/award/hr-voty-2022/",
+    "title": "HR Vendors of the Year 2022"
+  },
+  {
+    "route": "/award/vehicle-care-outcome-change-program-2025/",
+    "title": "Vehicle Care & Outcome Change Program 2025"
+  },
+  {
+    "route": "/gallery/genset-operators-awareness/",
+    "title": "Genset Operators Awareness"
+  },
+  {
+    "route": "/gallery/internal-combustion-engine/",
+    "title": "ICE (Internal Combustion Engine) Exam Preparation & Coaching"
+  },
+  {
+    "route": "/contact/",
+    "title": "Contact Us"
+  },
+  {
+    "route": "/company-profile/",
+    "title": "Company Profile"
+  }
+]
